@@ -40,15 +40,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
 body{
-	overflow: hidden;
+	overflow-y: scroll;
 }
-
-@media (max-width: 950px){
-	body{
-		overflow: scroll;
-	}
-}
-
 h1{
 	color: #584296b0;
 	font-weight: 600;
