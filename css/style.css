@@ -93,12 +93,6 @@ main{
 	border-radius: 50%;
 	position: absolute;
 }
-@media (max-width: 650px){
-	.circle1, .circle2, .circle3, .circle4{
-		height: 15rem;
-		width: 15rem;
-	}
-}
 .circle1 {
 	background: -webkit-gradient(linear, right top, left bottom, from(rgba(124, 255, 152, 0.9)), to(rgba(24, 255, 152,0.2)));
 	background: -o-linear-gradient(right top, rgba(124, 255, 152, 0.9), rgba(24, 255, 152,0.2));
@@ -127,6 +121,44 @@ main{
 	top: -5%;
 	left: -5%;
 }
+@media (max-width: 650px){
+	.circle1, .circle2, .circle3, .circle4{
+		height: 15rem;
+		width: 15rem;
+	}
+	.circle1{
+		top: 5%;
+	}
+}
+@media (max-width: 1000px){
+	.circle3{
+		right: 25%;
+	}
+}
+@media (max-width: 780px){
+	.circle1{
+		right: 10%;
+	}
+	.circle2{
+		left: 8%;
+	}
+}
+@media (max-width: 480px){
+	.circle1{
+		top: 15%;
+	}
+	.circle3{
+		right: 25%;
+	}
+}
+@media (max-width: 420px){
+	.circle2{
+		bottom: 5%;
+	}
+	.circle3{
+		bottom: 30%;
+	}
+}
 .glass{
 	background: white;
 	min-height: 80vh;
@@ -141,6 +173,11 @@ main{
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
+}
+@media (max-width: 420px){
+	.glass{
+		min-height: 65vh;
+	}
 }
 .dashboard{
 	-webkit-box-flex: 1;
