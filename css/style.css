@@ -94,7 +94,8 @@ main{
 }
 @media (max-width: 650px){
 	.circle1, .circle2, .circle3, .circle4{
-		display: none;
+		height: 15rem;
+		width: 15rem;
 	}
 }
 .circle1 {
@@ -250,6 +251,7 @@ main{
 }
 .status input{
 	background: linear-gradient(to right bottom, #65df989d, #6cdbeb9d);
+	width: 100%;
 	border-radius: 0 1rem;
 	padding: 5px 10px;
 	margin-top: 10px;
