@@ -4,6 +4,12 @@
 	padding: 0;
 	margin: 0;
 	border: 0;
+	/* уберём скролл у мозилы */
+	scrollbar-width: none;
+}
+/* повторим для хрома */
+*::-webkit-scrollbar{
+	width: 0;
 }
 *,*:before,*:after{
 	-moz-box-sizing: border-box;
@@ -258,6 +264,28 @@ main{
 .link a{
 	padding: 0 2rem;
 	color: black;
+	position: relative;
+}
+/* добавим подчёркивание у текста при навелении */
+.link a::after{
+	content: "";
+	display: block;
+	position: absolute;
+	bottom: -70%;
+	left: 50%;
+	/* а теперь поставим по центру */
+	transform: translate(-50%, 0);
+	height: 5px;
+	width: 0;
+	/* явно нужен другой цвет */
+	background: linear-gradient(to right, #75f8e0, rgb(81, 255, 174));
+	/* плавности хочется */
+	transition: all .3s;
+}
+/* добавим появление только при наведении */
+.link a:hover:after{
+	/* вся ширина выглядит странно, уменьшим её */
+	width: 70%;
 }
 .add{
 	width: 90%;
@@ -303,6 +331,10 @@ main{
 	}
 	.links{
 		margin-right: 1rem;
+	}
+	/* тут уже переход на мобильные устройства, так что этот эффект нам не нужен */
+	.link a::after{
+		display: none;
 	}
 }
 @media (max-width: 600px){
